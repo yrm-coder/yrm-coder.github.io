@@ -9,7 +9,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    Hello World |  Hexo
+     Hexo
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
@@ -40,33 +40,24 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-hello-world"
+  id="post-grafana"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
   data-scroll-reveal
 >
   <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  Hello World
-</h1>
- 
-
-    </header>
      
     <div class="article-meta">
-      <a href="/2021/03/31/hello-world/" class="article-date">
-  <time datetime="2021-03-30T18:08:43.649Z" itemprop="datePublished">2021-03-31</time>
+      <a href="/2021/03/31/grafana/" class="article-date">
+  <time datetime="2021-03-31T14:56:14.616Z" itemprop="datePublished">2021-03-31</time>
 </a>   
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">75</span>
+            <span class="post-count">638</span>
         </span>
     </span>
 
@@ -75,7 +66,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">1 min</span>
+            <span class="post-count">2 min</span>
         </span>
     </span>
 </div>
@@ -90,20 +81,41 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+  <p>Grafana是一款用Go语言开发的开源数据可视化工具，可以做数据监控和数据统计，带有告警功能</p>
+<hr>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="1-功能特点"><a href="#1-功能特点" class="headerlink" title="1. 功能特点"></a>1. 功能特点</h2><ul>
+<li>可视化：快速和灵活的客户端图形具有多种选项。面板插件为许多不同的方式可视化指标和日志。</li>
+<li>报警：可视化地为最重要的指标定义警报规则。Grafana将持续评估它们，并发送通知。</li>
+<li>通知：警报更改状态时，它会发出通知。接收电子邮件通知。</li>
+<li>动态仪表盘：使用模板变量创建动态和可重用的仪表板，这些模板变量作为下拉菜单出现在仪表板顶部。</li>
+<li>混合数据源：在同一个图中混合不同的数据源!可以根据每个查询指定数据源。这甚至适用于自定义数据源。</li>
+<li>注释：注释来自不同数据源图表。将鼠标悬停在事件上可以显示完整的事件元数据和标记。</li>
+<li>过滤器：过滤器允许您动态创建新的键/值过滤器，这些过滤器将自动应用于使用该数据源的所有查询。</li>
+</ul>
+<h2 id="2-安装"><a href="#2-安装" class="headerlink" title="2. 安装"></a>2. 安装</h2><blockquote>
+<p>详细安装教程可参考： <a target="_blank" rel="noopener" href="http://docs.grafana.org/installation/debian/">http://docs.grafana.org/installation/debian/</a></p>
+</blockquote>
+<h3 id="2-1-下载安装包"><a href="#2-1-下载安装包" class="headerlink" title="2.1 下载安装包"></a>2.1 下载安装包</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget [https://dl.grafana.com/oss/release/grafana-6.0.1-1.x86_64.rpm](https://dl.grafana.com/oss/release/grafana-6.0.1-1.x86_64.rpm)</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="2-2-安装环境依赖"><a href="#2-2-安装环境依赖" class="headerlink" title="2.2 安装环境依赖"></a>2.2 安装环境依赖</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum install initscripts fontconfig  </span><br><span class="line">yum install freetype</span><br><span class="line">yum install urw-fonts</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="2-3-安装Grafana服务"><a href="#2-3-安装Grafana服务" class="headerlink" title="2.3 安装Grafana服务"></a>2.3 安装Grafana服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -Uvh grafana-6.0.1-1.x86_64.rpm</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="2-4-插件安装"><a href="#2-4-插件安装" class="headerlink" title="2.4 插件安装"></a>2.4 插件安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#使用grafana-cli工具安装</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#获取可用插件列表 </span></span><br><span class="line">grafana-cli plugins list-remote   </span><br><span class="line"><span class="comment">#修改图形为饼状</span></span><br><span class="line">grafana-cli plugins install grafana-piechart-panel</span><br><span class="line"><span class="comment">#安装其他图形插件</span></span><br><span class="line">grafana-cli plugins install grafana-clock-panel</span><br><span class="line"><span class="comment">#钟表形展示</span></span><br><span class="line">grafana-cli plugins install briangann-gauge-panel</span><br><span class="line"><span class="comment">#字符型展示</span></span><br><span class="line">grafana-cli plugins install natel-discrete-panel</span><br><span class="line"><span class="comment">#服务器状态</span></span><br><span class="line">grafana-cli plugins install vonage-status-panel </span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
- 
+<h3 id="2-5-插件卸载"><a href="#2-5-插件卸载" class="headerlink" title="2.5 插件卸载"></a>2.5 插件卸载</h3><blockquote>
+<p>例：grafana-cli plugins uninstall vonage-status-panel 安装和卸载后需要重启grafana才能够生效</p>
+</blockquote>
+<h3 id="2-6-启动、重启、关闭"><a href="#2-6-启动、重启、关闭" class="headerlink" title="2.6 启动、重启、关闭"></a>2.6 启动、重启、关闭</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">启动：service grafana-server start</span><br><span class="line">停止：service grafana-server stop</span><br><span class="line">重启：service grafana-server restart</span><br><span class="line">加入开机自启动： chkconfig --add grafana-server on</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-7-启动测试"><a href="#2-7-启动测试" class="headerlink" title="2.7 启动测试"></a>2.7 启动测试</h3><ul>
+<li>默认用户密码：admin/admin</li>
+<li>访问地址:  服务地址 : <a target="_blank" rel="noopener" href="http://localhost:3000/">http://grafana服务地址:3000</a>如果出现登录界面，代表安装启动成功</li>
+<li>无法访问本地虚拟机中服务，需设置虚拟机防火墙允许访问</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">iptables -F</span><br><span class="line">iptables -P INPUT ACCEPT（设置默认允许规则）  </span><br></pre></td></tr></table></figure>
+
+<h1 id="创建Dashboard"><a href="#创建Dashboard" class="headerlink" title="创建Dashboard"></a>创建Dashboard</h1> 
       <!-- reward -->
       
       <div id="reword-out">
@@ -173,7 +185,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://yrm-coder.github.io/2021/03/31/hello-world/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://yrm-coder.github.io/2021/03/31/grafana/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -184,7 +196,7 @@
    
   <nav class="article-nav">
     
-      <a href="/2021/03/31/grafana/" class="article-nav-link">
+      <a href="/2021/03/31/python_base/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
@@ -193,6 +205,11 @@
         </div>
       </a>
     
+    
+      <a href="/2021/03/31/hello-world/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">Hello World</div>
+      </a>
     
   </nav>
 
