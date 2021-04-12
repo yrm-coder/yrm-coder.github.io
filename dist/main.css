@@ -334,7 +334,7 @@ body.darkmode input::-ms-input-placeholder {
 }
 
 body.darkmode .categories-box a {
-    color: #f2f2f2
+    color: #0681d0
 }
 
 body.darkmode #friends_link .friends_li a {
@@ -598,6 +598,35 @@ button {
     font-size: larger
 }
 
+.nav-main li ul{
+    display: none;
+  }
+  .nav-main li:hover ul{
+    display:block;
+  }
+  .sub-menu{
+      position: absolute;
+      background: #fff;
+      padding: 5px;
+      width: 8rem;
+      z-index:1000;
+      text-align: center;
+      border-radius: 5px;
+      box-shadow: 0 1px 40px -8px rgba(0,0,0,.5);
+      -webkit-animation: fadeInUp .3s .1s ease both;
+      list-style:none;
+  }
+  .nav-main li ul::before {
+      content: "";
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      margin-left: -10px;
+      border-width: 10px;
+      border-style: solid;
+      border-color: transparent transparent #fff transparent;
+  }
+
 .outer,
 .wrap {
     position: relative;
@@ -713,7 +742,7 @@ button {
     display: inline-block;
     vertical-align: middle;
     text-decoration: none;
-    color: #403e3e
+    color: #0681d0
 }
 
 .categories-box a:hover {
