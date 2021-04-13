@@ -2758,7 +2758,7 @@ pre .id {
 .navbar .nav .nav-item-link {
     display: block;
     padding: 1rem;
-    color: #bbb;
+    color: #f2f2f2;
     text-decoration: none;
     cursor: pointer
 }
