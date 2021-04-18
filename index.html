@@ -1,876 +1,310 @@
-<!DOCTYPE html>
-<!-- Highlight.js -->
-<!-- <link href="https://cdn.bootcdn.net/ajax/libs/highlight.js/9.18.1/styles/a11y-dark.min.css" rel="stylesheet">
-<script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script> -->
-
-
-<html lang="zh-CN">
-
-
-<head>
-  <meta charset="utf-8" />
-    
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <title>
-     
-  </title>
-  <meta name="generator" content="hexo-theme-ayer">
-  
-  <link rel="shortcut icon" href="/images/logo.jpg" />
-  
-  
-<link rel="stylesheet" href="/dist/main.css">
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css">
-  
-<link rel="stylesheet" href="/css/custom.css">
-
-  
-  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
-  
-  
-
-  
-
-</head>
-
-</html>
-
-<body>
-  <div id="app">
-    
-      
-    <main class="content on">
-      
-<section class="cover">
-    
-  <div class="cover-frame">
-    <div class="bg-box">
-      <img src="/images/日漫.jpg" alt="image frame" />
-    </div>
-    <div class="cover-inner text-center text-white">
-      <h1><a href="/"></a></h1>
-      <div id="subtitle-box">
-        
-        <span id="subtitle"></span>
-        
-      </div>
-      <div>
-        
-      </div>
-    </div>
-  </div>
-  <div class="cover-learn-more">
-    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
-  </div>
-</section>
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
-
-
-<!-- Subtitle -->
-
-  <script>
-    try {
-      var typed = new Typed("#subtitle", {
-        strings: ['一生懸命働き、一生愛されますように', '愿你一生努力，一生被爱', ''],
-        startDelay: 0,
-        typeSpeed: 200,
-        loop: true,
-        backSpeed: 100,
-        showCursor: true
-      });
-    } catch (err) {
-      console.log(err)
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title></title><meta name="author" content="guxing"><meta name="copyright" content="guxing"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title">
+<meta property="og:url" content="https://coder-yrm.cn/index.html">
+<meta property="og:site_name">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://coder-yrm.cn/img/logo.jpg">
+<meta property="article:author" content="guxing">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://coder-yrm.cn/img/logo.jpg"><link rel="shortcut icon" href="/img/logo.png"><link rel="canonical" href="https://coder-yrm.cn/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"languages":{"author":"作者: guxing","link":"链接: ","source":"来源: ","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
     }
-  </script>
-  
-<div id="main">
-  <section class="outer">
-  
-  
-  
-
-<div class="notice" style="margin-top:50px">
-    <i class="ri-heart-fill"></i>
-    <div class="notice-content" id="broad"></div>
-</div>
-<script type="text/javascript">
-    fetch('https://v1.hitokoto.cn')
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById("broad").innerHTML = data.hitokoto;
-        })
-        .catch(console.error)
-</script>
-
-<style>
-    .notice {
-        padding: 20px;
-        border: 1px dashed #e6e6e6;
-        color: #969696;
-        position: relative;
-        display: inline-block;
-        width: 100%;
-        background: #fbfbfb50;
-        border-radius: 10px;
-    }
-
-    .notice i {
-        float: left;
-        color: #999;
-        font-size: 16px;
-        padding-right: 10px;
-        vertical-align: middle;
-        margin-top: -2px;
-    }
-
-    .notice-content {
-        display: initial;
-        vertical-align: middle;
-    }
-</style>
-  
-  <article class="articles">
-    
-    
-    
-    
-    <article
-  id="post-图解网络基础知识"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/post/%E5%9B%BE%E8%A7%A3%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"
-    >图解网络基础知识</a> 
-</h2>
- 
-
-    </header>
-     
-    <div class="article-meta">
-      <a href="/post/%E5%9B%BE%E8%A7%A3%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="article-date">
-  <time datetime="2021-04-08T16:37:44.669Z" itemprop="datePublished">2021-04-09</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="图解网络基础知识"><a href="#图解网络基础知识" class="headerlink" title="图解网络基础知识"></a>图解网络基础知识</h1><p><img src="/post/%E5%9B%BE%E8%A7%A3%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E7%BD%91%E7%BB%9C.jpg" alt="图片"></p>
-<h3 id="网络协议"><a href="#网络协议" class="headerlink" title="网络协议"></a>网络协议</h3><p>我们用手机连接上网的时候，会用到许多网络协议。从手机连接 WiFi 开始，使用的是 <strong>802.11</strong> （即 WLAN ）协议，通过 WLAN 接入网络；手机自动获取网络配置，使用的是 <strong>DHCP</strong> 协议，获取配置后手机才能正常通信。这时手机已经连入<strong>局域网</strong>，可以访问局域网内的设备和资源，但还不能使用互联网应用，</p> 
-      <a class="article-more-link" href="/post/%E5%9B%BE%E8%A7%A3%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-最全面的Python重点"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/post/%E6%9C%80%E5%85%A8%E9%9D%A2%E7%9A%84Python%E9%87%8D%E7%82%B9/"
-    >最全面的Python重点</a> 
-</h2>
- 
-
-    </header>
-     
-    <div class="article-meta">
-      <a href="/post/%E6%9C%80%E5%85%A8%E9%9D%A2%E7%9A%84Python%E9%87%8D%E7%82%B9/" class="article-date">
-  <time datetime="2021-04-08T14:56:09.767Z" itemprop="datePublished">2021-04-08</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/python/">python</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="最全面的Python重点"><a href="#最全面的Python重点" class="headerlink" title="最全面的Python重点"></a>最全面的Python重点</h1><h3 id="1-Py2-VS-Py3"><a href="#1-Py2-VS-Py3" class="headerlink" title="1. Py2 VS Py3"></a>1. Py2 VS Py3</h3><ul>
-<li><p>print成为了函数，python2是关键字</p>
-</li>
-<li><p>不再有unicode对象，默认str就是unicode</p>
-</li>
-<li><p>python3除号返回浮点数</p>
-</li>
-<li><p>没有了long类型</p></li></ul> 
-      <a class="article-more-link" href="/post/%E6%9C%80%E5%85%A8%E9%9D%A2%E7%9A%84Python%E9%87%8D%E7%82%B9/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-闭包"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/post/%E9%97%AD%E5%8C%85/"
-    >闭包</a> 
-</h2>
- 
-
-    </header>
-     
-    <div class="article-meta">
-      <a href="/post/%E9%97%AD%E5%8C%85/" class="article-date">
-  <time datetime="2021-03-31T15:02:04.379Z" itemprop="datePublished">2021-03-31</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h3 id="全局变量-and-局部变量"><a href="#全局变量-and-局部变量" class="headerlink" title="全局变量  and  局部变量"></a>全局变量  and  局部变量</h3><ol>
-<li>全局变量：</li>
-</ol>
-<ul>
-<li><p>在整个文件中都能被访问</p>
-</li>
-<li><p>在函数内部不能修改全局变量</p>
-</li>
-<li><p>函数内部试图修改全局变量，python的屏蔽机制会在函数内部新建一个和全局变量同名的局部变量</p>
-</li>
-<li><p>函数内部要想真正修改全局变量，需要在全局变量钱加global</p></li></ul> 
-      <a class="article-more-link" href="/post/%E9%97%AD%E5%8C%85/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-机器学习分类"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%88%86%E7%B1%BB/"
-    >机器学习</a> 
-</h2>
- 
-
-    </header>
-     
-    <div class="article-meta">
-      <a href="/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%88%86%E7%B1%BB/" class="article-date">
-  <time datetime="2021-03-31T15:00:35.364Z" itemprop="datePublished">2021-03-31</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="1-机器学习分类"><a href="#1-机器学习分类" class="headerlink" title="1 机器学习分类"></a>1 机器学习分类</h1><ul>
-<li><p>传统机器学习</p>
-<p>机器学习可以理解成是生产算法的算法。需要人来先做特征提取，然后在把特征向量化后交给机器去训练。</p>
-<p>传统机器学习分为 <strong>监督学习</strong> 和 <strong>无监督学习</strong>。</p>
-</li>
-<li><p>深度学习</p>
-<p>深度学习是基于深度神经网络的学习（DNN）。深度学习可以自动提取特征。深度学习可以采用 End-to-End 的学习方式，只需要进行很少的归一化和白化，就可以将数据交给模型去训练。</p></li></ul> 
-      <a class="article-more-link" href="/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%88%86%E7%B1%BB/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-grafana"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/post/grafana/"
-    >Grafana</a> 
-</h2>
- 
-
-    </header>
-     
-    <div class="article-meta">
-      <a href="/post/grafana/" class="article-date">
-  <time datetime="2021-03-31T14:56:14.616Z" itemprop="datePublished">2021-03-31</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Blogs/">Blogs</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>Grafana是一款用Go语言开发的开源数据可视化工具，可以做数据监控和数据统计，带有告警功能</p>
-<hr>
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="1-功能特点"><a href="#1-功能特点" class="headerlink" title="1. 功能特点"></a>1. 功能特点</h2><ul>
-<li>可视化：快速和灵活的客户端图形具有多种选项。面板插件为许多不同的方式可视化指标和日志。</li>
-<li>报警：可视化地为最重要的指标定义警报规则。Grafana将持续评估它们，并发送通知。</li>
-<li>通知：警报更改状态时，它会发出通知。接收电子邮件通知。</li>
-<li></li></ul> 
-      <a class="article-more-link" href="/post/grafana/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-python_base"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/post/python_base/"
-    >base</a> 
-</h2>
- 
-
-    </header>
-     
-    <div class="article-meta">
-      <a href="/post/python_base/" class="article-date">
-  <time datetime="2016-01-24T13:46:07.000Z" itemprop="datePublished">2016-01-24</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/python/">python</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p><strong>1. 调整图片大小：</strong></p>
-<ol>
-<li>打开系统自带看图软件，设置图片大小</li>
-</ol>
-<p><strong>2. python内建函数是C实现的</strong></p>
-<p><strong>3. python 字符串自动填充函数</strong></p>
-<ul>
-<li><code>s.ljust(width, fillchar)</code></li>
-</ul>
-<p><strong>4. 最长上升子序列</strong></p> 
-      <a class="article-more-link" href="/post/python_base/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-  </article>
-  
-
-  
-</section>
-</div>
-
-      <footer class="footer">
-  <div class="outer">
-    <ul>
-      <li>
-        Copyrights &copy;
-        2021
-        <i class="ri-heart-fill heart_icon"></i> guxing
-      </li>
-    </ul>
-    <ul>
-      <li>
-        
-      </li>
-    </ul>
-    <ul>
-      <li>
-        
-        
-        <span>
-  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></s>
-  <span class="division">|</span>
-  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
-</span>
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-        
-      </li>
-    </ul>
-    <ul>
-      
-    </ul>
-    <ul>
-      
-    </ul>
-    <ul>
-      <li>
-        <!-- cnzz统计 -->
-        
-        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
-        
-      </li>
-    </ul>
-  </div>
-</footer>
-      <div class="float_btns">
-        <div class="totop" id="totop">
-  <i class="ri-arrow-up-line"></i>
-</div>
-
-<div class="todark" id="todark">
-  <i class="ri-moon-line"></i>
-</div>
-
-      </div>
-    </main>
-    <aside class="sidebar on">
-      <button class="navbar-toggle"></button>
-<nav class="navbar">
-  
-  <div class="logo">
-    <a href="/"><img src="/images/logo.png" alt=""></a>
-  </div>
-  
-  <ul class="nav nav-main">
-    
-    <li class="nav-item">
-      <!-- <a class="nav-item-link" href="/%5Bobject%20Object%5D">主页</a> -->
-      <a class="nav-item-link" href="/">主页</a>	  
-			
-
-    </li>
-    
-    <li class="nav-item">
-      <!-- <a class="nav-item-link" href="/%5Bobject%20Object%5D">归档</a> -->
-      <a class="nav-item-link" href="/archives">归档</a>	  
-			
-
-    </li>
-    
-    <li class="nav-item">
-      <!-- <a class="nav-item-link" href="/%5Bobject%20Object%5D">分类</a> -->
-      <a class="nav-item-link" href="/categories">分类</a>	  
-			
-
-    </li>
-    
-    <li class="nav-item">
-      <!-- <a class="nav-item-link" href="/%5Bobject%20Object%5D">标签</a> -->
-      <a class="nav-item-link" href="/tags">标签</a>	  
-			
-
-    </li>
-    
-    <li class="nav-item">
-      <!-- <a class="nav-item-link" href="/%5Bobject%20Object%5D">友链</a> -->
-      <a class="nav-item-link" href="/friends">友链</a>	  
-			
-
-    </li>
-    
-    <li class="nav-item">
-      <!-- <a class="nav-item-link" href="/%5Bobject%20Object%5D">关于我</a> -->
-      <a class="nav-item-link" href="/about">关于我</a>	  
-			
-
-    </li>
-    
-  </ul>
-</nav>
-<nav class="navbar navbar-bottom">
-  <ul class="nav">
-    <li class="nav-item">
-      
-      <a class="nav-item-link nav-item-search"  title="搜索">
-        <i class="ri-search-line"></i>
-      </a>
-      
-      
-      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
-        <i class="ri-rss-line"></i>
-      </a>
-      
-    </li>
-  </ul>
-</nav>
-<div class="search-form-wrap">
-  <div class="local-search local-search-plugin">
-  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
-  <div id="local-search-result" class="local-search-result"></div>
-</div>
-</div>
-
-    </aside>
-    <script>
-      if (window.matchMedia("(max-width: 768px)").matches) {
-        document.querySelector('.content').classList.remove('on');
-        document.querySelector('.sidebar').classList.remove('on');
-      }
-    </script>
-    <div id="mask"></div>
-
-<!-- #reward -->
-<div id="reward">
-  <span class="close"><i class="ri-close-line"></i></span>
-  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
-  <div class="reward-box">
-    
-    <div class="reward-item">
-      <img class="reward-img" src="/images/alipay.jpg">
-      <span class="reward-type">支付宝</span>
-    </div>
-    
-    
-    <div class="reward-item">
-      <img class="reward-img" src="/images/wechat.jpg">
-      <span class="reward-type">微信</span>
-    </div>
-    
-  </div>
-</div>
-    
-<script src="/js/jquery-2.0.3.min.js"></script>
-
-
-<script src="/js/lazyload.min.js"></script>
-
-<!-- Tocbot -->
-
-<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
-<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
-
-<script src="/dist/main.js"></script>
-
-<!-- ImageViewer -->
-
-<!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    <!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-
-        <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                <!--  Controls are self-explanatory. Order can be changed. -->
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                        <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
-<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
-
-<script>
-    function viewer_init() {
-        let pswpElement = document.querySelectorAll('.pswp')[0];
-        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
-
-        $imgArr.forEach(($em, i) => {
-            $em.onclick = () => {
-                // slider展开状态
-                // todo: 这样不好，后面改成状态
-                if (document.querySelector('.left-col.show')) return
-                let items = []
-                $imgArr.forEach(($em2, i2) => {
-                    let img = $em2.getAttribute('data-idx', i2)
-                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
-                    let title = $em2.getAttribute('alt')
-                    // 获得原图尺寸
-                    const image = new Image()
-                    image.src = src
-                    items.push({
-                        src: src,
-                        w: image.width || $em2.width,
-                        h: image.height || $em2.height,
-                        title: title
-                    })
-                })
-                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
-                    index: parseInt(i)
-                });
-                gallery.init()
-            }
-        })
-    }
-    viewer_init()
-</script>
-
-<!-- MathJax -->
-
-<!-- Katex -->
-
-<!-- busuanzi  -->
-
-
-<script src="/js/busuanzi-2.3.pure.min.js"></script>
-
-
-<!-- ClickLove -->
-
-
-<script src="/js/clickLove.js"></script>
-
-
-<!-- ClickBoom1 -->
-
-<!-- ClickBoom2 -->
-
-<!-- CodeCopy -->
-
-
-<link rel="stylesheet" href="/css/clipboard.css">
-
-<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
-<script>
-  function wait(callback, seconds) {
-    var timelag = null;
-    timelag = window.setTimeout(callback, seconds);
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: true,
+  isToc: false,
+  postUpdate: '2021-04-19 00:12:08'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
   }
-  !function (e, t, a) {
-    var initCopyCode = function(){
-      var copyHtml = '';
-      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
-      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
-      copyHtml += '</button>';
-      $(".highlight .code pre").before(copyHtml);
-      $(".article pre code").before(copyHtml);
-      var clipboard = new ClipboardJS('.btn-copy', {
-        target: function(trigger) {
-          return trigger.nextElementSibling;
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
         }
-      });
-      clipboard.on('success', function(e) {
-        let $btn = $(e.trigger);
-        $btn.addClass('copied');
-        let $icon = $($btn.find('i'));
-        $icon.removeClass('ri-file-copy-2-line');
-        $icon.addClass('ri-checkbox-circle-line');
-        let $span = $($btn.find('span'));
-        $span[0].innerText = 'COPIED';
-        
-        wait(function () { // 等待两秒钟后恢复
-          $icon.removeClass('ri-checkbox-circle-line');
-          $icon.addClass('ri-file-copy-2-line');
-          $span[0].innerText = 'COPY';
-        }, 2000);
-      });
-      clipboard.on('error', function(e) {
-        e.clearSelection();
-        let $btn = $(e.trigger);
-        $btn.addClass('copy-failed');
-        let $icon = $($btn.find('i'));
-        $icon.removeClass('ri-file-copy-2-line');
-        $icon.addClass('ri-time-line');
-        let $span = $($btn.find('span'));
-        $span[0].innerText = 'COPY FAILED';
-        
-        wait(function () { // 等待两秒钟后恢复
-          $icon.removeClass('ri-time-line');
-          $icon.addClass('ri-file-copy-2-line');
-          $span[0].innerText = 'COPY';
-        }, 2000);
-      });
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
     }
-    initCopyCode();
-  }(window, document);
-</script>
-
-
-<!-- CanvasBackground -->
-
-
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
     
-  </div>
-</body>
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/logo.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/"></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/post/%E5%9B%BE%E8%A7%A3%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" title="图解网络基础知识">图解网络基础知识</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-04-08T16:37:44.669Z" title="发表于 2021-04-09 00:37:44">2021-04-09</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></span></div><div class="content">图解网络基础知识
+网络协议我们用手机连接上网的时候，会用到许多网络协议。从手机连接 WiFi 开始，使用的是 802.11 （即 WLAN ）协议，通过 WLAN 接入网络；手机自动获取网络配置，使用的是 DHCP 协议，获取配置后手机才能正常通信。这时手机已经连入局域网，可以访问局域网内的设备和资源，但还不能使用互联网应用，例如：微信、抖音等。想要访问互联网，还需要在手机的上联网络设备上实现相关协议，即在无线路由器上配置 NAT、 PPPOE 等功能，再通过运营商提供的互联网线路把局域网接入到互联网中，手机就可以上网玩微信、刷抖音了。
+网络协议示意图
 
-</html>
+局域网 ：小范围内的私有网络，一个家庭内的网络、一个公司内的网络、一个校园内的网络都属于局域网。
+广域网：把不同地域的局域网互相连接起来的网络。运营商搭建广域网实现跨区域的网络互连。
+互联网：互联全世界的网络。互联网是一个开放、互联的网络，不属于任何个人和任何机构，接入互联网后可以和互联网的任何一台主机进行通信。
+
+简单来说，就是手机、无线路由器等设备通过多种网络协议实现通信。网络协议就是为了通信各方能够互相交流而定义的标准或规则，设 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/post/%E6%9C%80%E5%85%A8%E9%9D%A2%E7%9A%84Python%E9%87%8D%E7%82%B9/" title="最全面的Python重点">最全面的Python重点</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-04-08T14:56:09.767Z" title="发表于 2021-04-08 22:56:09">2021-04-08</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/python/">python</a></span></div><div class="content">最全面的Python重点1. Py2 VS Py3
+print成为了函数，python2是关键字
+
+不再有unicode对象，默认str就是unicode
+
+python3除号返回浮点数
+
+没有了long类型
+
+xrange不存在，range替代了xrange
+
+可以使用中文定义函数名变量名
+
+高级解包 和*解包
+
+限定关键字参数 *后的变量必须加入名字=值
+
+raise from
+
+iteritems移除变成items()
+
+yield from 链接子生成器
+
+asyncio,async/await原生协程支持异步编程
+
+新增 enum, mock, ipaddress, concurrent.futures, asyncio urllib, selector
+
+不同枚举类间不能进行比较
+同一枚举类间只能进行相等的比较
+枚举类的使用(编号默认从1开始)
+为了避免枚举类中相同枚举值的出现，可以使用@unique装饰枚举类
+
+
+
+12345678910111213141516171819202122232425#枚举的注意事项from enum import Enumclass COL ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/post/%E9%97%AD%E5%8C%85/" title="闭包">闭包</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-03-31T15:02:04.379Z" title="发表于 2021-03-31 23:02:04">2021-03-31</time></span></div><div class="content">全局变量  and  局部变量
+全局变量：
+
+
+在整个文件中都能被访问
+
+在函数内部不能修改全局变量
+
+函数内部试图修改全局变量，python的屏蔽机制会在函数内部新建一个和全局变量同名的局部变量
+
+函数内部要想真正修改全局变量，需要在全局变量钱加global
+
+
+
+局部变量：
+
+
+只能在函数内部访问
+函数的形参是局部变量
+
+global/nonlocal
+global
+
+
+函数内修改全局变量
+
+
+nonlocal
+
+
+函数内修改外部变量（非全局变量）
+
+闭包
+函数嵌套：
+内嵌函数用到外层变量
+外部函数返回内嵌函数
+功能：
+
+
+在不修改原代码的条件下实现新功能
+
+1234567891011In[3]:def fun1(x):...:      def fun2(y):...:          nonlocal x...:           x += 1...:       return x * y...:  return fun2...: fun1(2)(3)Out[3]: 9
+
+匿名函数 lambdalambda x(参数): 返回值
+123456789In [4]: lambd ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%88%86%E7%B1%BB/" title="机器学习">机器学习</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-03-31T15:00:35.364Z" title="发表于 2021-03-31 23:00:35">2021-03-31</time></span></div><div class="content">1 机器学习分类
+传统机器学习
+机器学习可以理解成是生产算法的算法。需要人来先做特征提取，然后在把特征向量化后交给机器去训练。
+传统机器学习分为 监督学习 和 无监督学习。
+
+深度学习
+深度学习是基于深度神经网络的学习（DNN）。深度学习可以自动提取特征。深度学习可以采用 End-to-End 的学习方式，只需要进行很少的归一化和白化，就可以将数据交给模型去训练。
+
+
+2 机器学习中的一些概念首先我们需要了解几个机器学习中的起码要知道是怎么回事的概念，了解了后面看代码才不会一脸懵逼。
+
+训练样本
+就是用于训练的数据。包括了现实中的一些信息数据，以及对应的结果，也就是标签。
+
+训练
+对训练样本的特征进行统计和归纳的过程。
+
+分类模型
+总结出的特征，判断标准。
+
+验证
+用测试数据集验证模型是否正确的过程。这个过程是在模型训练完后进行的，就是再用另外一些样本数据，代入到模型中去，看它的准确率如何。
+
+
+2.1 聚类聚类 是一种典型的 无监督学习 ，是把数据进行分类的过程。
+进行聚类的基本思想是，利用 向量 之间的距离 —— 空间中的 欧式距离 或 曼哈顿距离 ， 根据距离的大小判断对象是否应 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/post/grafana/" title="Grafana">Grafana</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-03-31T14:56:14.616Z" title="发表于 2021-03-31 22:56:14">2021-03-31</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Blogs/">Blogs</a></span></div><div class="content">Grafana是一款用Go语言开发的开源数据可视化工具，可以做数据监控和数据统计，带有告警功能
+
+安装1. 功能特点
+可视化：快速和灵活的客户端图形具有多种选项。面板插件为许多不同的方式可视化指标和日志。
+报警：可视化地为最重要的指标定义警报规则。Grafana将持续评估它们，并发送通知。
+通知：警报更改状态时，它会发出通知。接收电子邮件通知。
+
+动态仪表盘：使用模板变量创建动态和可重用的仪表板，这些模板变量作为下拉菜单出现在仪表板顶部。
+混合数据源：在同一个图中混合不同的数据源!可以根据每个查询指定数据源。这甚至适用于自定义数据源。
+注释：注释来自不同数据源图表。将鼠标悬停在事件上可以显示完整的事件元数据和标记。
+过滤器：过滤器允许您动态创建新的键/值过滤器，这些过滤器将自动应用于使用该数据源的所有查询。
+
+2. 安装
+详细安装教程可参考： http://docs.grafana.org/installation/debian/
+
+2.1 下载安装包1wget [https://dl.grafana.com/oss/release/grafana-6.0.1-1.x86_64.rpm ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/post/python_base/" title="base">base</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2016-01-24T13:46:07.000Z" title="发表于 2016-01-24 21:46:07">2016-01-24</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/python/">python</a></span></div><div class="content">1. 调整图片大小：
+
+打开系统自带看图软件，设置图片大小
+
+2. python内建函数是C实现的
+3. python 字符串自动填充函数
+
+s.ljust(width, fillchar)
+
+4. 最长上升子序列
+
+
+
+动态规划
+
+1bisect.bisect_left（）插入会自动排序
+
+5. python collections库
+
+默认字典（好用）
+
+
+from collections import defaultdict
+dd= defaultdict(list)
+
+
+Counter 自动统计元素个数返回字典
+
+
+Counter([1,3,4,5,2,4,5,2])
+Counter(&#123;1: 1, 3: 1, 4: 2, 5: 2, 2: 2&#125;)
+
+
+6. 字符串find和index的区别
+
+find 找不到返回-1
+index找不到会异常
+
+7. 要记得字符串**startwith*和*endwith**俩个实用方法，替代查找了
+8. python 正则替换（太方便了）
+1re.sub(r&#x27;(\d+)&#x27;, &#x27;*\g&lt;1& ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/logo.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">guxing</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/%E5%9B%BE%E8%A7%A3%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" title="图解网络基础知识">图解网络基础知识</a><time datetime="2021-04-08T16:37:44.669Z" title="发表于 2021-04-09 00:37:44">2021-04-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/%E6%9C%80%E5%85%A8%E9%9D%A2%E7%9A%84Python%E9%87%8D%E7%82%B9/" title="最全面的Python重点">最全面的Python重点</a><time datetime="2021-04-08T14:56:09.767Z" title="发表于 2021-04-08 22:56:09">2021-04-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/%E9%97%AD%E5%8C%85/" title="闭包">闭包</a><time datetime="2021-03-31T15:02:04.379Z" title="发表于 2021-03-31 23:02:04">2021-03-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%88%86%E7%B1%BB/" title="机器学习">机器学习</a><time datetime="2021-03-31T15:00:35.364Z" title="发表于 2021-03-31 23:00:35">2021-03-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/grafana/" title="Grafana">Grafana</a><time datetime="2021-03-31T14:56:14.616Z" title="发表于 2021-03-31 22:56:14">2021-03-31</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Blogs/"><span class="card-category-list-name">Blogs</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/python/"><span class="card-category-list-name">python</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"><span class="card-category-list-name">计算机网络</span><span class="card-category-list-count">1</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/python/" style="font-size: 1.1em; color: #999">python</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/04/"><span class="card-archive-list-date">四月 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/03/"><span class="card-archive-list-date">三月 2021</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2016/01/"><span class="card-archive-list-date">一月 2016</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">6</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-04-18T16:12:08.810Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By guxing</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
